@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" height="100%">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Fonts -->
+    <link href="../stylesheets/css/font-face.css" rel="stylesheet" media="all">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="../resources/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+    <!-- Bootstrap CSS-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Form CSS -->
+	<link href="../stylesheets/css/form.css" rel="stylesheet" media="all">
+	<!-- Vendor CSS-->
+    <link href="../resources/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="../resources/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="../resources/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="../resources/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="../resources/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="../resources/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="../resources/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all"></link>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+
+
+
+    <link rel="stylesheet" href="../js/jquery.datetimepicker.min.css" />
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery.datetimepicker.full.js"></script>
+
+
+    <!-- Main CSS-->
+    <link href="../stylesheets/components/navbar.css" rel="stylesheet" media="all">
+    <!-- <title></title> -->
+  </head>
+  <body class="animsition">
+
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <img src="../resources/images/LOGO.png" id="logo-image"></img>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#requestModal">
+                                <i class="fas fa-file"></i>New Request</a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#historyModal">
+                                <i class="far fa-calendar-alt"></i>History</a>
+                        </li>
+                        <li>
+                          <a href="https://rooster.utwente.nl/" target="_blank">
+                              <i class="far fa-calendar-alt"></i>Timetable</a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#settingsModal">
+                                <i class="fas fa-cog" ></i>Settings</a>
+                        </li>
+                        <li>
+
+                            <a href="#" data-toggle="modal" data-target="#contactModal">
+                                <i class="fas fa-address-book" ></i>Contact </a>
+
+                        </li>
+                        <li>
+                          <a href="#" class="logout">
+                              <i class="fas fa-sign-out-alt"></i>Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- END HEADER MOBILE-->
+
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                  <img src="../resources/images/LOGO.png" draggable="false" (dragstart)="false;" class="unselectable" id="logo-image"></img>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                      <li>
+                          <a  href="#" data-toggle="modal" data-target="#requestModal">
+                              <i class="fas fa-file"></i>New Request</a>
+                      </li>
+                      <li>
+                        <a href="#" data-toggle="modal" data-target="#historyModal">
+                          <i class = "fas fa-history"></i>History
+                        </a>
+
+                      </li>
+                      <li>
+                        <a href="https://rooster.utwente.nl/" target="_blank">
+                            <i class="far fa-calendar-alt"></i>Timetable</a>
+                      </li>
+                      <li>
+                          <a href="#" data-toggle="modal" data-target="#settingsModal">
+                              <i class="fas fa-cog"></i>Settings</a>
+                      </li>
+                      <li>
+                          <a href="#" data-toggle="modal" data-target="#contactModal">
+                              <i class="fas fa-address-book"></i>Contact Us</a>
+                      </li>
+                      <li>
+                        <a href="#" class = "logout">
+                            <i class="fas fa-sign-out-alt"></i>Logout</a>
+                      </li>
+
+
+
+
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap" id="top-bar">
+                            <div class="header-button">
+                                <div class="noti-wrap" id = "bell">
+                                    <div class="noti__item js-item-menu">
+                                        <i class="fas fa-bell"></i>
+                                        <div class="notifi-dropdown js-dropdown" id ="bell-dropdown">
+                                            <div class="notifi__footer">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- HEADER DESKTOP-->
+
+            <div class="row m-t-25">
+                <div class="col-xl-4 col-lg-3">
+                    <div class="overview-item overview-item--c1">
+                        <div class="overview__inner">
+                            <div class="overview-box clearfix">
+                                <div class="icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="text">
+                                    <h2 id="pendingRequests">Retrieving..</h2>
+                                    <span>Requests pending</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-3">
+                    <div class="overview-item overview-item--c2">
+                        <div class="overview__inner">
+                            <div class="overview-box clearfix">
+                                <div class="icon">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
+                                <div class="text">
+                                    <h2 id="acceptedRequests">Retrieving..</h2>
+                                    <span>Accepted requests</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-xl-4 col-lg-3">
+                     <div class="overview-item overview-item--c3">
+                        <div class="overview__inner">
+                            <div class="overview-box clearfix">
+                                <div class="icon">
+                                    <i class="fas fa-calendar-times"></i>
+                                </div>
+                                <div class="text">
+                                    <h2 id="cancelledRequests">Retrieving..</h2>
+                                    <span>Rejected requests</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+
+
+
+            <!-- History -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="title-1 m-b-25">History</h2>
+                    <div class="table-responsive table--no-card m-b-40">
+                        <table id="request-table" class="table table-borderless table-striped table-earning">
+                            <thead>
+                                <tr>
+                                    <th>Old Room</th>
+                                    <th>Old Date</th>
+                                    <th>New Date</th>
+                                    <th>Request Type</th>
+                                    <th>Status</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+  <!-- request modal -->
+  <div class="modal fade" id="requestModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 id="request-h1">New Request</h1>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+	<div class="modal-body" style="padding: 40px">
+		<form class="form-style-7" name="clearForm" autocomplete="off">
+		<ul>
+		<li>
+			<label for="faculty">Faculty</label>
+			<div class="ui-select">
+			<select id="faculty" name="faculty">
+      <option value="99" selected disabled hidden></option>
+      <option>BMS</option>
+			<option>ET</option>
+			<option>EEMCS/EWI</option>
+			<option>TNW</option>
+      <option>ITC</option>
+			</select>
+			</div>
+			<span>Please select your faculty</span>
+		</li>
+		<li>
+			<label for="current-room">Current room</label>
+      <div class="ui-select">
+			<select id="current-room" name="current-room" size="1">
+        <option value="99" disabled hidden selected></option>
+          <option>DL GY</option>
+          <option>RA 2231</option>
+          <option>WA 1</option>
+          <option>SP 1</option>
+          <option>CU B209</option>
+          <option>SP 2</option>
+          <option>RA 3336</option>
+          <option>SP 7</option>
+          <option>SP 5</option>
+          <option>SP 6</option>
+          <option>RA 3334</option>
+          <option>SP 3</option>
+          <option>SP 4</option>
+          <option>OH 113</option>
+          <option>OH 114</option>
+          <option>OH 115</option>
+          <option>OH 110</option>
+          <option>OH 111</option>
+          <option>OH 112</option>
+          <option>CI T300</option>
+          <option>RA 4231</option>
+          <option>CI T100</option>
+          <option>RA 2336</option>
+          <option>RA 2334</option>
+          <option>RA 3231</option>
+          <option>CU C238</option>
+          <option>CU B103</option>
+          <option>RA 2501</option>
+          <option>RA 2502</option>
+          <option>RA 2503</option>
+          <option>HR N109</option>
+          <option>RA 2504</option>
+          <option>CI T400</option>
+          <option>RA 2237</option>
+          <option>CU B101</option>
+          <option>WA 2</option>
+          <option>RA 1501</option>
+          <option>VR 559</option>
+          <option>WH 217</option>
+          <option>WA 3</option>
+          <option>WA 4</option>
+          <option>WH 215</option>
+          <option>WH 223</option>
+          <option>Therm</option>
+          <option>HB 2B</option>
+          <option>HB 2C</option>
+          <option>HB 2D</option>
+          <option>CR 2G</option>
+          <option>CR 2H</option>
+          <option>CR 2K</option>
+          <option>CR 3B</option>
+          <option>CR 3D</option>
+          <option>CR 3E</option>
+          <option>NH 117</option>
+          <option>VR 501</option>
+          <option>HT 1300</option>
+          <option>NH 126</option>
+          <option>WH 221</option>
+          <option>VR 583</option>
+          <option>OH 211</option>
+          <option>HT 900</option>
+          <option>RA 4334</option>
+          <option>RA 4336</option>
+          <option>WA 1+2</option>
+          <option>OH 116</option>
+          <option>HT 700a</option>
+          <option>HT 700b</option>
+          <option>NH 115</option>
+          <option>HR C101</option>
+          <option>RA 4237</option>
+          <option>HT 1100</option>
+          <option>OH 218</option>
+          <option>NH 209</option>
+          <option>NH 207</option>
+          <option>NH 205</option>
+          <option>NH 124</option>
+          <option>HT 500b</option>
+          <option>HT 500a</option>
+          <option>OH 215</option>
+          <option>OH 210</option>
+          <option>VR SL1</option>
+          <option>VR SL2</option>
+          <option>VR SL3</option>
+          <option>Sportcentrum Hal 1</option>
+          <option>Sportcentrum Hal 2</option>
+          <option>VR Audiozaal</option>
+          <option>HB 2A</option>
+          <option>HB 2E</option>
+          <option>HB 2F</option>
+          <option>CR 2L</option>
+          <option>CR 2M</option>
+          <option>CR 2N</option>
+          <option>CR 3A</option>
+          <option>CR 3C</option>
+          <option>CR 3F</option>
+          <option>CR 3H</option>
+          <option>CR 4A</option>
+      </select>
+    </div>
+			<span>Please specify for which room your current class is scheduled</span>
+		</li>
+		<li>
+			<label for="datetime-request">Date and time</label>
+			<input type="text" id="datetime-request" autocomplete="off">
+			<span>The date and time at which your class starts</span>
+		</li>
+
+    <li>
+      <label for="activity">Type of activity</label>
+      <div class="ui-select">
+      <select id="activity">
+      <option value="99" selected disabled hidden></option>
+      <option>Lecture</option>
+      <option>Tutorial</option>
+      <option>Colstruction</option>
+      <option>Project</option>
+      <option>Exam</option>
+      </select>
+      </div>
+      <span>Please select the type of activity</span>
+    </li>
+
+		<input type="radio" name="type-of-request" value="RESCHEDULE" id="change-radio"> Make a schedule change<br>
+		<input type="radio" name="type-of-request" value="CANCEL" id="cancel-radio"> Cancel the class<br>
+		</ul>
+		</form>
+		<form id="change-form" class="form-style-7">
+		<ul>
+		<li>
+			<label for="datetime-change ">Date and time</label>
+			<input type="text" id="datetime-change" autocomplete="off">
+			<span>The new date and time for your class</span>
+		</li>
+		<li>
+			<label for="nr-of-students">Number of students</label>
+			<input type="text" maxlength="4" id="nr-of-students" autocomplete="off">
+			<span>The number of students that will be attending this class</span>
+		</li>
+		<li>
+			<label for="notes-input">Notes</label>
+			<textarea id="notes-input" onkeyup="adjust_textarea(this)" placeholder="Do you want to add something more?"></textarea>
+			<span>If you have any comments for the scheduler please specifiy them here</span>
+		</li>
+		</ul>
+		</form>
+        <div class="modal-footer">
+          <button class="btn btn-default btn-block request-button" type="submit" id="reschedule-button">Request change</button>
+          <button class="btn btn-default btn-block request-button" data-dismiss="modal" type="submit" id="cancel-button">Cancel class</button>
+        </div>
+    </div>
+        </div>
+        </div>
+      </div>
+
+<!-- settings modal -->
+      <div class="modal fade" id="settingsModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+                <h1 id="settings-h1">Settings</h1>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+    	<div class="modal-body" style="padding: 40px">
+        <form>
+  <select class="custom-select my-1 mr-sm-2" id="settingsOptions">
+    <option value="0" selected hidden>Choose what you want to change</option>
+    <option value="1">Password</option>
+    <option value="2">E-mail</option>
+    <option value="3">Default faculty</option>
+    <option value="4">Name</option>
+  </select>
+
+  <form>
+  <div class="form-row" id="psw-change-form">
+    <div class="col">
+      <input type="password" class="form-control" placeholder="Old password" id="old-psw-input">
+    </div>
+    <div class="col">
+      <input type="password" class="form-control" placeholder="New password" id="new-psw-input">
+    </div>
+  </div>
+</form>
+
+<input type="email" class="form-control" id="email-input" placeholder="Enter new e-mail">
+
+<select class="custom-select my-1 mr-sm-2" id="facultyOptions">
+<option value="99" selected disabled hidden>Select a faculty</option>
+<option value="0">BMS</option>
+<option value="1">ET</option>
+<option value="2">EEMCS/EWI</option>
+<option value="3">TNW</option>
+<option value="4">ITC</option>
+</select>
+
+
+<form>
+  <input type="text" class="form-control" placeholder="New name" id="new-name-input">
+</form>
+
+
+
+</form>
+            <div class="modal-footer">
+                  <button class="btn btn-default btn-block request-button" data-dismiss="modal" type="submit" id="settings-button">Confirm changes</button>
+            </div>
+        </div>
+            </div>
+            </div>
+          </div>
+
+<!-- history modal -->
+
+          <!-- history modal -->
+          <div class="modal fade" id="historyModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+
+                    <h1 id="history-h1">History</h1>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+          <div class="modal-body ">
+            <div class="table-responsive table-responsive-data2">
+            <table id="history-table" class="table table-borderless table-striped table-earning">
+                <thead>
+                    <tr>
+                        <th>Old Room</th>
+                        <th>New Room</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table></div>
+
+            </div>
+                </div>
+                </div>
+              </div>
+
+<!-- contact modal -->
+              <div class="modal fade" id="contactModal" role="dialog">
+                <div class="modal-dialog modal-lg">
+
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 id="contact-h1">Contact the developers</h1>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+              <div class="modal-body" style="padding: 40px">
+                <input type="text" class="form-control" placeholder="Subject" id="contact-subject" autocomplete="off">
+                <label></label>
+                <textarea type="text" class="form-control" placeholder="Your message" id="contact-message" autocomplete="off"></textarea>
+                </div>
+                <div class="modal-footer">
+                      <button class="btn btn-default btn-block request-button" data-dismiss="modal" type="submit" id="contact-button">Send message</button>
+                </div>
+                    </div>
+                    </div>
+                  </div>
+
+
+<!-- // Example starter JavaScript for disabling form submissions if there are invalid fields -->
+        <script type="text/javascript" src="../js/main.js"></script>
+        <script type="text/javascript" src="../js/popup-pages.js"></script>
+        <script>
+        $("#datetime-request").datetimepicker();
+        $("#datetime-change").datetimepicker();
+        </script>
+
+        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+        <script src="../resources/vendor/bootstrap-4.1/popper.min.js"></script>
+        <script src="../resources/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+        <!-- Vendor JS       -->
+        <script src="../resources/vendor/slick/slick.min.js">
+        </script>
+        <script src="../resources/vendor/wow/wow.min.js"></script>
+        <script src="../resources/vendor/animsition/animsition.min.js"></script>
+        <script src="../resources/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+        </script>
+        <script src="../resources/vendor/counter-up/jquery.waypoints.min.js"></script>
+        <script src="../resources/vendor/counter-up/jquery.counterup.min.js">
+        </script>
+        <script src="../resources/vendor/circle-progress/circle-progress.min.js"></script>
+        <script src="../resources/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+        <script src="../resources/vendor/chartjs/Chart.bundle.min.js"></script>
+        <script src="../resources/vendor/select2/select2.min.js">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+        <script src="../js/dashboard.js"></script>
+        <script src ="../js/notifications.js"></script>
+        <script src="../js/contact.js"></script>
+        <script src="../js/logout.js"></script>
+        <!-- Request form -->
+        <script src="../js/requestForm.js"></script>
+        <!-- Get all requests script-->
+        <script src="../js/request-history.js"></script>
+
+        <!-- Settings -->
+        <script src="../js/settings.js"></script>
+        <!-- Contact -->
+        <script src="../js/contact.js"></script>
+        <!--  Always executes -->
+        <script src="../js/autoexecute.js"></script>
+        <!--Date picker -->
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+        <!-- Popup JS-->
+        <script src="../js/popup-pages.js"></script>
+        <!-- Main JS-->
+        <script src="../js/main.js"></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Fonts -->
+    <link href="../stylesheets/css/font-face.css" rel="stylesheet" media="all">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="../resources/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+    <!-- Bootstrap CSS-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Form CSS -->
+	<link href="../stylesheets/css/form.css" rel="stylesheet" media="all">
+	<!-- Vendor CSS-->
+    <link href="../resources/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="../resources/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="../resources/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="../resources/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="../resources/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="../resources/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="../resources/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" /></link>
+
+    <link rel="stylesheet" href="../js/jquery.datetimepicker.min.css" />
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery.datetimepicker.full.js"></script>
+
+
+    <!-- Main CSS-->
+    <link href="../stylesheets/components/navbar.css" rel="stylesheet" media="all">
+    <!-- <title></title> -->
+  </head>
+  <body class="animsition">
+
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="index.html">
+                            <i class="fas fa-hourglass-start"></i>
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                      <li>
+                          <a href="#" data-toggle="modal" data-target="#historyModal">
+                              <i class="far fa-calendar-alt"></i>Full History</a>
+                      </li>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#settingsModal">
+                                <i class="fas fa-cog"></i>Settings</a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#contactModal">
+                                <i class="fas fa-address-book"></i>Contact Us</a>
+
+                        </li>
+                        <li>
+                          <a href="#" class = "logout">
+                              <i class="fas fa-sign-out-alt"></i>Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- END HEADER MOBILE-->
+
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                  <img src="../resources/images/LOGO.png" id="logo-image"></img>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                      <li>
+                          <a href="#" data-toggle="modal" data-target="#historyModal">
+                              <i class="far fa-calendar-alt"></i>Full History</a>
+
+                      </li>
+                      <li>
+                          <a id ="settings-modal" href="#" data-toggle="modal" data-target="#settingsModal">
+                              <i class="fas fa-cog"></i>Settings</a>
+                      </li>
+                      <li>
+                          <a href="#" data-toggle="modal" data-target="#contactModal">
+                              <i class="fas fa-address-book"></i>Contact Us</a>
+                      </li>
+                      <li>
+                        <a href="#" class="logout">
+                            <i class="fas fa-sign-out-alt"></i>Logout</a>
+                      </li>
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+<!-- TODO: Margin between page content and menu-->
+<!-- TODO: Side menu a bit smaller -->
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap" id="top-bar">
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- HEADER DESKTOP-->
+
+            <div class="row m-t-25">
+                <div class="col-xl-4 col-lg-3">
+                    <div class="overview-item overview-item--c1">
+                        <div class="overview__inner">
+                            <div class="overview-box clearfix">
+                                <div class="icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="text">
+                                    <h2 id="pendingRequests">Retrieving..</h2>
+                                    <span>Requests pending</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-3">
+                    <div class="overview-item overview-item--c4">
+                        <div class="overview__inner">
+                            <div class="overview-box clearfix">
+                                <div class="icon">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
+                                <div class="text">
+                                    <h2 id="handledRequests">Retrieving..</h2>
+                                    <span>Handled this week</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-3">
+                    <div class="overview-item overview-item--c2">
+                        <div class="overview__inner">
+                            <div class="overview-box clearfix">
+                                <div class="icon">
+                                    <i class="fas fa-folder-open"></i>
+                                </div>
+                                <div class="text">
+                                    <h2 id="totalRequests">Retrieving..</h2>
+                                    <span>Total requests received</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Recent Requests -->
+            <div class="row">
+              <div class="col-lg-12">
+                    <!-- DATA TABLE -->
+                    <h3 class="title-5 m-b-35">Pending Requests</h3>
+                    <div class="table-responsive table--no-card m-b-40">
+                        <table class="table table-borderless table-striped table-earning" id ="request-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Type</th>
+                                    <th>Course Type</th>
+                                    <th>Old Date</th>
+                                    <th>New Date</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- END DATA TABLE -->
+                </div>
+            </div>
+
+<!-- Accept a reschedule request popup -->
+<div class="modal fade" id="accept-modal" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Accept this request?</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="room">Input the new room: </label>
+            <div class="ui-select">
+              <select class="new-room" name="new-room" size="1">
+                <option value="99" disabled hidden selected></option>
+                        <option >2A HB 2001 (OND-05)</option>
+                        <option >2B HB 2003 (OND-06)</option>
+                        <option >2C HB 2005 (OND-07)</option>
+                        <option >2D HB 2007 (OND-08)</option>
+                        <option >2E HB 2009 (OND-09)</option>
+                        <option >2F HB 2011 (OND-10)</option>
+                        <option >2G CR 2173 (OND-16)</option>
+                        <option >2H CR 2175 (OND-15)</option>
+                        <option >2K CR 2183 (OND-14)</option>
+                        <option >2L CR 2178 (OND-11)</option>
+                        <option >2M CR 2182 (OND-12)</option>
+                        <option >2N CR 2186 (OND-13)</option>
+                        <option >3A CR 3173 (OND-24)</option>
+                        <option >3B CR 3175 (OND-23)</option>
+                        <option >3D CR 3178 (OND-21)</option>
+                        <option >3E CR 3182 (OND-20)</option>
+                        <option >3F CR 3186 (OND-19)</option>
+                        <option >3H CR 3194 (OND-17)</option>
+                        <option >4A CR 4142 (OND-25)</option>
+                        <option >CI T100</option>
+                        <option >CI T300</option>
+                        <option >CI T400</option>
+                        <option >CU B101</option>
+                        <option >CU B103</option>
+                        <option >CU B209</option>
+                        <option >CU C238</option>
+                        <option >HR C101</option>
+                        <option >HR N109</option>
+                        <option >RA 1501</option>
+                        <option >RA 2231</option>
+                        <option >RA 2237</option>
+                        <option >RA 2334</option>
+                        <option >RA 2336</option>
+                        <option >RA 2501</option>
+                        <option >RA 2502</option>
+                        <option >RA 2503</option>
+                        <option >RA 2504</option>
+                        <option >RA 3231</option>
+                        <option >RA 3334</option>
+                        <option >RA 3336</option>
+                        <option >RA 4231</option>
+                        <option >RA 4237</option>
+                        <option >RA 4334</option>
+                        <option >RA 4336</option>
+                        <option >SP 1</option>
+                        <option >SP 2</option>
+                        <option >SP 3</option>
+                        <option >SP 4</option>
+                        <option >SP 5</option>
+                        <option >SP 6</option>
+                        <option >SP 7</option>
+                        <option >WA 1</option>
+                        <option >WA 2</option>
+                        <option >WA 3</option>
+                        <option >WA 4</option>
+                        <option >OH 110</option>
+                        <option >OH 111</option>
+                        <option >OH 112</option>
+                        <option >OH 113</option>
+                        <option >OH 114</option>
+                        <option >OH 115</option>
+                        <option >OH 116</option>
+                        <option >OH 210</option>
+                        <option >OH 211</option>
+                        <option >OH 215</option>
+                        <option >OH 218</option>
+                        <option >NH 115</option>
+                        <option >NH 124</option>
+                        <option >NH 205</option>
+                        <option >NH 207</option>
+                        <option >NH 209</option>
+                        <option >HT 500a</option>
+                        <option >HT 500b</option>
+                        <option >HT 700a</option>
+                        <option >HT 700b</option>
+                        <option >HT 900</option>
+                        <option >HT 1100</option>
+                        <option >3C CR 3183 (OND-22)</option>
+                        <option >VR 501</option>
+                        <option >VR 583</option>
+                        <option >VR 559</option>
+                        <option >WH 215</option>
+                        <option >WH 217</option>
+                        <option >WH 221</option>
+                        <option >WH 223 </option>
+                        <option >HT 1300</option>
+                        <option >NH 117</option>
+                        <option >NH 126</option>
+                        <option >Therm</option>
+              </select>
+            </div>
+
+          </div>
+          <div class="form-group">
+            <label for="room">We recommend the following rooms: </label>
+            <div class="ui-select" id = "gaze-div">
+              <select id="gaze-rooms" size="1">
+
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="comment">Other details: </label>
+            <textarea class="other-details form-control border-primary" rows="8"></textarea>
+          </div>
+        </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="accept-request btn btn-default">Submit</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- Cancel a request popup -->
+<div class="modal fade" id="cancel-modal" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Cancel this request?</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="comment">Details: </label>
+            <textarea class="other-details form-control border-primary" rows="8"></textarea>
+          </div>
+        </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default cancel-request">Submit</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Accept a cancel request popup -->
+  <div class="modal fade" id="accept2-modal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Accept this request?</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="comment">Details: </label>
+              <textarea class="other-details form-control border-primary" rows="8"></textarea>
+            </div>
+          </form>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default accept2-request">Submit</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  <!-- history modal -->
+  <div class="modal fade" id="historyModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+            <h1>History</h1>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  <div class="modal-body" style="padding: 40px">
+    <div class="table-responsive table-responsive-data2" id ="demo">
+        <table class="table table-data2" id ="history-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Course Type</th>
+                    <th>Old Date</th>
+                    <th>New Date</th>
+                </tr>
+            </thead>
+            <tbody id ="history-body">
+            </tbody>
+        </table>
+    </div>
+    </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="settingsModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+                <h1>Settings</h1>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+      <div class="modal-body" style="padding: 40px">
+        <form>
+  <select class="custom-select my-1 mr-sm-2" id="settingsOptions">
+    <option value="0" selected hidden>Choose what you want to change</option>
+    <option value="1">Password</option>
+    <option value="2">E-mail</option>
+    <option value="4">Name</option>
+  </select>
+
+  <form >
+  <div class="form-row" id="psw-change-form">
+    <div class="col">
+      <input type="password" class="form-control" placeholder="Old password" id="old-psw-input">
+    </div>
+    <div class="col">
+      <input type="password" class="form-control" placeholder="New password" id="new-psw-input">
+    </div>
+  </div>
+</form>
+
+<input type="email" class="form-control" id="email-input" placeholder="Enter new e-mail">
+
+
+<form>
+  <input type="text" class="form-control" placeholder="New name" id="new-name-input">
+</form>
+
+
+
+</form>
+            <div class="modal-footer">
+                  <button class="btn btn-default btn-block request-button" data-dismiss="modal" type="submit" id="settings-button">Confirm changes</button>
+            </div>
+        </div>
+            </div>
+            </div>
+          </div>
+
+
+<!-- Modal -->
+<!-- settings modal -->
+<div class="modal fade" id="settingsModal" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+          <h1 id="settings-h1">Settings</h1>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+<div class="modal-body" style="padding: 40px">
+  <form>
+<select class="custom-select my-1 mr-sm-2" id="settingsOptions">
+<option value="0" selected hidden>Choose what you want to change</option>
+<option value="1">Password</option>
+<option value="2">E-mail</option>
+<option value="4">Name</option>
+</select>
+
+<form >
+<div class="form-row" id="psw-change-form">
+<div class="col">
+<input type="password" class="form-control" placeholder="Old password" id="old-psw-input">
+</div>
+<div class="col">
+<input type="password" class="form-control" placeholder="New password" id="new-psw-input">
+</div>
+</div>
+</form>
+
+<input type="email" class="form-control" id="email-input" placeholder="Enter new e-mail">
+
+
+<form>
+<input type="text" class="form-control" placeholder="New name" id="new-name-input">
+</form>
+
+
+
+</form>
+      <div class="modal-footer">
+            <button class="btn btn-default btn-block request-button" data-dismiss="modal" type="submit" id="settings-button">Confirm changes</button>
+      </div>
+  </div>
+      </div>
+      </div>
+    </div>
+
+<!-- history modal -->
+<div class="modal fade" id="historyModal" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+          <h1 id="history-h1">History</h1>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+<div class="modal-body" style="padding: 40px">
+  <label>Pula</label>
+  </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- contact modal -->
+                  <div class="modal fade" id="contactModal" role="dialog">
+                    <div class="modal-dialog modal-lg">
+
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 id="contact-h1">Contact the developers</h1>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                  <div class="modal-body" style="padding: 40px">
+                    <input type="text" class="form-control" placeholder="Subject" id="contact-subject">
+                    <label></label>
+                    <textarea type="text" class="form-control" placeholder="Your message" id="contact-message"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                          <button class="btn btn-default btn-block request-button" data-dismiss="modal" type="submit" id="contact-button">Send message</button>
+                    </div>
+                        </div>
+                        </div>
+                      </div>
+
+
+        <!-- Jquery JS-->
+        <script type="text/javascript" src="../js/dashboard.js"></script>
+
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+        <script src="../resources/vendor/bootstrap-4.1/popper.min.js"></script>
+        <script src="../resources/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+        <!-- Vendor JS       -->
+        <script src="../resources/vendor/slick/slick.min.js">
+        </script>
+        <script src="../resources/vendor/wow/wow.min.js"></script>
+        <script src="../resources/vendor/animsition/animsition.min.js"></script>
+        <script src="../resources/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+        </script>
+        <script src="../resources/vendor/counter-up/jquery.waypoints.min.js"></script>
+        <script src="../resources/vendor/counter-up/jquery.counterup.min.js">
+        </script>
+        <script src="../resources/vendor/circle-progress/circle-progress.min.js"></script>
+        <script src="../resources/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+        <script src="../resources/vendor/chartjs/Chart.bundle.min.js"></script>
+        <script src="../resources/vendor/select2/select2.min.js">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+        <script src="http://pagination.js.org/dist/2.1.2/pagination.min.js">
+        </script>
+
+      <!--  <script src="../js/requestForm.js"></script>-->
+        <!-- Get all requests script-->
+        <script src="../js/contact.js"></script>
+        <script src="../js/getRequests.js"></script>
+        <script src="../js/settings.js"></script>
+        <script src="../js/logout.js"></script>
+        <!--  Always executes -->
+        <script src="../js/autoexecute.js"></script>
+        <!--Date picker -->
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+        <!-- Popup JS-->
+        <script src="../js/popup-pages.js"></script>
+        <!-- Main JS-->
+        <script src="../js/main.js"></script>
+  </body>
+
+</html>
